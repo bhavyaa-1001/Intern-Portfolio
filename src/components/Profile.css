@@ -1,0 +1,124 @@
+.profile-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 3rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-card {
+  max-width: 42rem;
+  width: 100%;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-image {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.02);
+}
+
+.profile-info {
+  padding: 2rem;
+}
+
+.profile-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #764ba2;
+  padding-bottom: 0.5rem;
+}
+
+.profile-bio {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.hobbies-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.hobbies-list {
+  list-style: none;
+  padding: 0;
+}
+
+.hobbies-list li {
+  color: #4a5568;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.hobbies-list li::before {
+  content: "•";
+  color: #764ba2;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .profile-content {
+    flex-direction: row;
+  }
+  
+  .profile-image {
+    width: 16rem;
+    height: auto;
+    border-radius: 1rem 0 0 1rem;
+  }
+  
+  .profile-info {
+    flex: 1;
+  }
+}
+
+@media (hover: hover) {
+  .profile-card:hover {
+    box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.15), 0 15px 15px -5px rgba(0, 0, 0, 0.08);
+  }
+}
